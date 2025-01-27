@@ -1,0 +1,13 @@
+name: First GitHub Actions Workflow
+on: [push]
+
+jobs:
+  testing_github:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: echo "Hello, GitHub Actions!"
+    - name: Display repository name
+      run: this workflow runs on the repository ${{ github.repository }}
